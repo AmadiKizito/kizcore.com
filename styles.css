@@ -98,7 +98,7 @@ a {
 
 .hero-content img {
   position: relative;
- 
+
 }
 
 .header-actions a {
@@ -114,61 +114,93 @@ a {
   font-size: 24px;
 }
 
+
+/* Hero image section */
 .hero {
-  min-height: 720px;
   position: relative;
+  width: 100%;
+  height: 450px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  background: #161513;
-  color: white;
 }
 
-.hero-image {
-  position: absolute;
-  inset: 0 0 0 44%;
-  background:
-    linear-gradient(90deg, #151413 0%, rgba(21, 20, 19, .82) 11%, rgba(21, 20, 19, .08) 48%, rgba(21, 20, 19, .02)),
-    url("hero-photo.png") center 35% / cover no-repeat;
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
+/* Text over the image */
 .hero-content {
   position: absolute;
-  bottom: 0%;
-
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
   z-index: 2;
-  width: min(610px, 45%);
-  margin-left: 6%;
-  padding-top: 50px;
+  color: white;
+  max-width: 500px;
 }
 
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 4px;
-  font-weight: 600;
-  margin-bottom: 18px;
+/* Mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 30%;
+    background: #211812;
+  }
+
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-content .description {
+    font-size: 13px;
+    max-width: 260px;
+  }
 }
 
-.hero h1 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(72px, 8vw, 125px);
-  line-height: .9;
-  font-weight: 500;
-  margin-bottom: 18px;
-}
+/* Smaller phones */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 420px;
+  }
 
-.hero h2 {
-  font-size: clamp(26px, 3vw, 42px);
-  line-height: 1.1;
-  font-weight: 500;
-  margin-bottom: 18px;
-}
+  .hero img {
+    height: 420px;
+  }
 
-.hero-copy {
-  max-width: 440px;
-  font-size: 15px;
-  color: rgba(255, 255, 255, .82);
-  margin-bottom: 28px;
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 16px;
+  }
+
+  .hero-content .description {
+    font-size: 12px;
+  }
 }
 
 .button {
