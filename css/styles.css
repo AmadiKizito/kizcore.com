@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap'); */
 
 :root {
   --ink: #171717;
@@ -37,7 +43,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo img {
-    width: 100px;
+    width: 80px;
     height: auto;
     display: block;
 }
@@ -224,6 +230,7 @@ a { color: inherit; text-decoration: none; }
 
 .section {
   padding: 74px 6%;
+  margin-bottom: 10px;
 }
 
 .about {
@@ -252,16 +259,30 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 26px;
 }
 
+
+/* Shared image styling */
 .image-card {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    width: 100%;
+    min-width: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
+/* About section: laptop and bottle image */
 .about-photo {
-  min-height: 390px;
-  background-image: url("workspace.jpg");
+    background-image: url("../img/about-desk.png");
+    min-height: 280px;
+    border-radius: 20px;
 }
+
+/* Academic section: books and laptop image */
+.books-photo {
+    background-image: url("../img/computer-books.png");
+    min-height: 350px;
+    border-radius: 20px;
+}
+
 
 .traits article,
 .info-list article {
@@ -326,7 +347,7 @@ a { color: inherit; text-decoration: none; }
   color: white;
   background:
     linear-gradient(90deg, rgba(10,10,9,.95), rgba(10,10,9,.68)),
-    url("mountains.jpg") center / cover no-repeat;
+    url("../img/computer-books.png") center / cover no-repeat;
 }
 
 .journey-content {
@@ -386,7 +407,7 @@ a { color: inherit; text-decoration: none; }
 
 .mountain-small {
   height: 165px;
-  background: url("mountains-detail.jpg") center / cover no-repeat;
+  background: url("../img/Confident\ Man\ Against\ Wood\ Paneling.png") center / cover no-repeat;
 }
 
 .quote {
@@ -551,7 +572,7 @@ footer {
     bottom: auto;
     background:
       linear-gradient(0deg, #151413 0%, rgba(21,20,19,.1) 60%),
-      url("hero-photo.png") center top / cover no-repeat;
+      url("../img/kizito1.png") center top / cover no-repeat;
   }
 
   .hero-content {
