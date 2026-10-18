@@ -121,186 +121,95 @@ a {
 }
 
 
-
-/* =========================
-   HERO SECTION
-========================= */
-
+/* Hero image section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 620px;
-    overflow: hidden;
-    background: #17110d;
-    color: #fff;
-    isolation: isolate;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
 }
 
-/* Background picture */
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 35%;
-    display: block;
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-/* Dark overlay behind the text */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.75) 0%,
-        rgba(0, 0, 0, 0.48) 45%,
-        rgba(0, 0, 0, 0.08) 100%
-    );
-}
-
-/* Text positioning */
+/* Text over the image */
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 6%;
-    transform: translateY(-40%);
-    z-index: 1;
-    width: 48%;
-    max-width: 520px;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: white;
+  max-width: 500px;
 }
 
-.eyebrow {
-    margin-bottom: 8px;
-    font-size: 14px;
-    letter-spacing: 3px;
-}
-
-.hero-content h1 {
-    margin: 0 0 10px;
-    font-size: clamp(55px, 7vw, 88px);
-    line-height: 1.05;
-}
-
-.hero-content h2 {
-    margin: 10px 0 16px;
-    font-size: clamp(24px, 3vw, 36px);
-    line-height: 1.25;
-}
-
-.hero-copy {
-    max-width: 390px;
-    margin-bottom: 24px;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #f3f0eb;
-}
-
-/* Discover button */
-.button-light {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 14px 20px;
-    background: #f4f0e8;
-    color: #111;
-    text-decoration: none;
-}
-
-.button-light span {
-    font-size: 20px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
+/* Mobile screens */
 @media (max-width: 768px) {
-    .hero {
-        height: 100vh;
-        height: 100svh;
-        min-height: 720px;
-    }
+  .hero {
+    position: relative;
+    height: auto;
+    min-height: 500px;
+    overflow: hidden;
+  }
 
-    .hero-bg {
-        object-position: 60% center;
-    }
+  .hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 30%;
+    background: #211812;
+  }
 
-    .hero-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.15) 0%,
-            rgba(0, 0, 0, 0.15) 25%,
-            rgba(0, 0, 0, 0.62) 52%,
-            rgba(0, 0, 0, 0.82) 100%
-        );
-    }
+  .hero-content {
+    
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 90%;
+  }
 
-    .hero-content {
-        top: auto;
-        bottom: 35px;
-        left: 22px;
-        right: 22px;
-        width: auto;
-        max-width: 500px;
-        transform: none;
-    }
+  .hero-content h1 {
+    font-size: 38px;
+  }
 
-    .eyebrow {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
+  .hero-content h2 {
+    font-size: 18px;
+  }
 
-    .hero-content h1 {
-        font-size: clamp(48px, 12vw, 68px);
-    }
-
-    .hero-content h2 {
-        font-size: clamp(23px, 6vw, 30px);
-        line-height: 1.3;
-    }
-
-    .hero-copy {
-        max-width: 420px;
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 18px;
-    }
-
-    .button-light {
-        padding: 13px 16px;
-        font-size: 13px;
-    }
+  .hero-content .description {
+    font-size: 13px;
+    max-width: 260px;
+  }
 }
 
 /* Smaller phones */
-@media (max-width: 380px) {
-    .hero {
-        min-height: 740px;
-    }
+@media (max-width: 480px) {
+  .hero {
+    min-height: 420px;
+  }
 
-    .hero-content {
-        left: 18px;
-        right: 18px;
-        bottom: 25px;
-    }
+  .hero img {
+    height: 420px;
+  }
 
-    .hero-content h1 {
-        font-size: 46px;
-    }
+  .hero-content h1 {
+    font-size: 32px;
+  }
 
-    .hero-content h2 {
-        font-size: 22px;
-    }
+  .hero-content h2 {
+    font-size: 16px;
+  }
 
-    .hero-copy {
-        font-size: 13px;
-    }
+  .hero-content .description {
+    font-size: 12px;
+  }
 }
-
 
 .button {
   display: inline-flex;
