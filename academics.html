@@ -462,11 +462,24 @@
     <!-- FOOTER -->
     <footer class="academic-footer">
         <p>© 2026 KIZCORE. All Rights Reserved.</p>
-        <p>LEARN. GROW. MAKE AN IMPACT.</p>
+        <p>LEARN. GROW. MAKE AN IMPACT.</p> 
     </footer>
 
 
     <script src="./js/academics.js"></script>
+
+    <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuButton.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('open'));
+    });
+  </script>
 
 </body>
 </html>
